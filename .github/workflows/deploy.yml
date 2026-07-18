@@ -42,7 +42,9 @@ jobs:
         username: ${{ secrets.EC2_USER }}
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
-          whoami
+          docker pull ${{ secrets.DOCKERHUB_USERNAME }}/spring-boot-ci-demo:latest
+          docker rm -f ci-demo
+          docker run -d --name ci-demo -p 8080:8080 ${{ secrets.DOCKERHUB_USERNAME }}/spring-boot-ci-demo:latest
     
       
       
