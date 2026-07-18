@@ -34,6 +34,16 @@ jobs:
 
     - name: Push Image
       run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/spring-boot-ci-demo:latest
+
+    - name: SSH and Deploy to EC2
+      uses: appleboy/ssh-action@v1
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: whoami
+    
       
       
       
