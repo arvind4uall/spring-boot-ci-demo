@@ -8,7 +8,7 @@ public class Welcome {
 
     @GetMapping("/")
     public String greetings(){
-        return "Hi!! Welcome from CI/CD pipeline....";
+        return "This project is deployed using Github actions!!!";
     }
 
 }
