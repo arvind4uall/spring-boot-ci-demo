@@ -1,6 +1,6 @@
-# spring-boot-ci-demo project using Github actions
+# Spring-boot-ci-demo project using Github actions
 
-## commands and their usages 
+## Commands and their usages 
 ```bash
 sudo systemctl start docker
 
