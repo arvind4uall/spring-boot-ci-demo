@@ -20,6 +20,4 @@ newgrp docker
 ```
 
 
-## Github actions for CI/CD 
-
-# spring-boot-ci-demo
+## Github actions for CI/CD
